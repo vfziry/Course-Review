@@ -23,4 +23,4 @@ ref/
 
 # Keep only the standalone personal course review files from tex/.
 tex/*
-!tex/editor_course_schedule.pdf
+!tex/course_review.pdf
