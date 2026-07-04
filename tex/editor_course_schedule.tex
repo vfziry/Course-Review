@@ -1,0 +1,128 @@
+\documentclass[11pt,fontset=fandol]{ctexart}
+
+\usepackage[a4paper,margin=1.2cm]{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage[colorlinks=true,urlcolor=black,linkcolor=black]{hyperref}
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{7pt}
+\renewcommand{\arraystretch}{1.55}
+\setlength{\extrarowheight}{0pt}
+\renewcommand{\baselinestretch}{1}
+\setlength{\skip\footins}{24pt}
+\setlength{\arrayrulewidth}{1pt}
+
+\definecolor{mathstatblue}{HTML}{DCEBFF}
+\definecolor{csdsred}{HTML}{FFE0E0}
+\definecolor{finecongreen}{HTML}{DFF3E4}
+\newcommand{\MathStatCode}[1]{\colorbox{mathstatblue}{#1}}
+\newcommand{\CSDSCode}[1]{\colorbox{csdsred}{#1}}
+\newcommand{\FinEconCode}[1]{\colorbox{finecongreen}{#1}}
+\newcommand{\SyllabusBase}{https://github.com/vfziry/Course-Review/blob/main/syllabus}
+\newcommand{\CourseCode}[2]{\href{\SyllabusBase/#1}{#2}}
+\newcommand{\lighthline}{\arrayrulecolor{black!10}\hline\arrayrulecolor{black}}
+\newcommand{\midhline}{\arrayrulecolor{black!50}\hline\arrayrulecolor{black}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newcolumntype{N}[1]{>{\footnotesize\raggedright\arraybackslash}m{#1}}
+\newcounter{EditorCodeFootnote}
+\newcounter{EditorWLFootnote}
+\newcounter{EditorNoteFootnote}
+\newcounter{PhDACategoryFootnote}
+
+\newenvironment{EditorCourseTable}{%
+\begin{longtable}{C{1.8cm}L{6.2cm}C{0.7cm}N{7.4cm}}
+\hline
+\textbf{Code\footnotemark[\value{EditorCodeFootnote}]} & \textbf{Course Title} & \textbf{WL\footnotemark[\value{EditorWLFootnote}]} & {\normalsize\textbf{Note\footnotemark[\value{EditorNoteFootnote}]}}\\
+\midhline
+\endfirsthead
+\hline
+\textbf{Code} & \textbf{Course Title} & \textbf{WL} & {\normalsize\textbf{Note}}\\
+\midhline
+\endhead
+\hline
+\endfoot
+}{%
+\end{longtable}
+}
+
+\title{Editor's Course Schedule and Course Notes}
+\author{Zirun ZHENG}
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\noindent This document records the editor's personal course-taking experience and subjective comments. The comments are highly subjective and are provided for reference only. It omits most non-major courses that are not directly related to quantitative finance.
+
+\par\medskip
+\noindent Because the same course may vary substantially across semesters and instructors, this document only reflects the editor's experience in the listed offering. Students who want detailed instructor and syllabus information should check the corresponding semester in SIS.
+
+\vspace{0.2cm}
+
+\refstepcounter{footnote}
+\setcounter{EditorCodeFootnote}{\value{footnote}}
+\footnotetext{Courses are grouped by semester. Course codes are linked to the corresponding syllabus when available. Colors indicate broad areas: green for Finance \& Economics, blue for Mathematics \& Statistics, and red for Computer Science \& Data Science.}
+\refstepcounter{footnote}
+\setcounter{EditorWLFootnote}{\value{footnote}}
+\footnotetext{WL is short for workload. It is a purely subjective indicator and is roughly proportional to the time spent on the course. Difficulty is also included in this workload score; in most cases, course difficulty and workload are strongly positively correlated. As a rough reference, 2--3 is close to a regular course with assignments every two to three weeks, 4--5 is close to a regular course with weekly assignments, and courses above 5 should be chosen carefully. If difficulty and workload differ substantially, this will be noted in the fourth-column Note.}
+\refstepcounter{footnote}
+\setcounter{EditorNoteFootnote}{\value{footnote}}
+\footnotetext{Notes record the editor's subjective course experience and selected course features that the editor considers worth mentioning. They should be read as highly subjective comments.}
+
+\begin{EditorCourseTable}
+\multicolumn{4}{l}{\normalsize\textbf{2023 Fall}}\\ \lighthline
+\FinEconCode{\CourseCode{ACT2111_v_004_230627.pdf}{ACT2111}} & Introductory Financial Accounting & 3 & \\
+\CSDSCode{\CourseCode{CSC1001_v_002_230718.pdf}{CSC1001}} & Introduction to Computer Science: Programming Methodology & 3 & \\
+\FinEconCode{\CourseCode{ECO2011_v_003_230627.pdf}{ECO2011}} & Basic Microeconomics & 2 & \\
+\MathStatCode{\CourseCode{MAT1011_v_002_230803.pdf}{MAT1011}} & Honours Calculus I & 7 & \\ \midhline
+
+\multicolumn{4}{l}{\normalsize\textbf{2024 Spring}}\\ \lighthline
+\CSDSCode{\CourseCode{CSC1002_v_002_231122.pdf}{CSC1002}} & Computational Laboratory & 3 & \\
+\FinEconCode{\CourseCode{FIN2010_v_005_231031.pdf}{FIN2010}} & Financial Management & 3 & \\
+\MathStatCode{\CourseCode{MAT1012_v_002_231211.pdf}{MAT1012}} & Honours Calculus II & 7 & \\
+\MathStatCode{\CourseCode{MAT2042_v_002_231211.pdf}{MAT2042}} & Honours Linear Algebra & 10 & Taught by Prof. Weiming NI. The material itself is manageable, but the assignments contain many problems; the editor spent roughly two full days per week reading the textbook and solving problem sets.\\
+\MathStatCode{\CourseCode{STA2001_v_004_231122.pdf}{STA2001}} & Probability and Statistics I & 4 & Lectures are not difficult, but the spring final exam is usually much harder, calculation-heavy, and focused on conceptual understanding; the mean and median were only around 40+.\\ \midhline
+
+\multicolumn{4}{l}{\normalsize\textbf{2024 Fall}}\\ \lighthline
+\CSDSCode{\CourseCode{CSC3001_v_005_240607.pdf}{CSC3001}} & Discrete Mathematics & 3 & \\
+\CSDSCode{\CourseCode{CSC3100_v_007_240529.pdf}{CSC3100}} & Data Structures & 3 & \\
+\FinEconCode{\CourseCode{ECO3121_v_005_240621.pdf}{ECO3121}} & Introductory Econometrics & 3 & \\
+\CSDSCode{\CourseCode{GEB2405_v_001_231218.pdf}{GEB2405}} & Understanding Data Science & 2 & Mainly covers R programming and package-based operations, and can also satisfy the GEB general education requirement. The letter-grade distribution was relatively low.\\
+\MathStatCode{\CourseCode{MAT2001_v_004_240812.pdf}{MAT2001}} & Honours Ordinary Differential Equations & 6 & Among Prof. Weiming NI's courses, this is relatively manageable in both difficulty and workload.\\
+\MathStatCode{\CourseCode{MAT2060_v_003_240812.pdf}{MAT2060}} & Honours Mathematical Analysis & 8 & Taught by Prof. Weiming NI. The midterm can be quite difficult; the mean and median were usually only around 30+.\\
+\MathStatCode{\CourseCode{MAT3042_v_001_240812.pdf}{MAT3042}} & Honours Linear Algebra II & 7 & Taught by Prof. Daniel WONG. MAT2042 is a required prerequisite. The course is difficult and competitive, with a small class mostly composed of students who earned A-range grades in MAT2042.\\ \midhline
+
+\multicolumn{4}{l}{\normalsize\textbf{2025 Spring}}\\ \lighthline
+\CSDSCode{\CourseCode{CSC3002_v_006_241118.pdf}{CSC3002}} & C/C++ Programming & 3 & \\
+\CSDSCode{\CourseCode{CSC3050_v_005_241118.pdf}{CSC3050}} & Computer Architecture & 6 & Taught by Prof. Weichung HSU. The course covers many topics and is more suitable for students with some relevant background. The projects were not especially difficult in the editor's view: the first two each took about one day, and the last two each took about two days.\\
+\CSDSCode{\CourseCode{CSC3170_v_006_241120.pdf}{CSC3170}} & Database System & 4 & The spring offering is mostly concept-based and relatively easy; the editor personally found it not very helpful. However, students can still learn a lot from the final project if they take it seriously.\\
+\CSDSCode{\CourseCode{CSC4120_v_003_241118.pdf}{CSC4120}} & Design and Analysis of Algorithms & 7 & Taught by Prof. Konstantinos COURCOUBETIS. The content roughly covers MIT 6.006 and MIT 6.046, with high difficulty and dense topics. Exam difficulty may be adjusted according to class progress; the editor's midterm was quite difficult and tested flexible, deep understanding.\\
+\CSDSCode{\CourseCode{DDA3020_v_006_241118.pdf}{DDA3020}} & Machine Learning & 4 & \\
+\MathStatCode{\CourseCode{ERG2081_v_003_240812.pdf}{ERG2081}} & Independent Study I: Graph Theory & 6 & Independent study with a professor on a topic of interest; the editor studied graph theory with Prof. Kenneth SHUM. The editor joined a small reading seminar, so the workload was not light because it required self-study and presentations.\\
+\MathStatCode{\CourseCode{MAT3007_v_010_241118.pdf}{MAT3007}} & Optimization & 4 & \\ \midhline
+
+\multicolumn{4}{l}{\normalsize\textbf{2025 Fall}}\\ \lighthline
+\MathStatCode{\CourseCode{CSC4220_v_001_250612.pdf}{CSC4220}} & Matrix Computation & 7 & Taught by Prof. Hongyuan ZHA. This is a PhD-oriented course with high difficulty. Since the editor learned linear algebra through the mathematics-track sequence, which emphasizes linear transformations, and had not taken numerical analysis before, the course was quite challenging.\\
+\CSDSCode{\CourseCode{DDA4230_v_004_250721.pdf}{DDA4230}} & Reinforcement Learning & 5 & Theory-oriented and includes mathematical derivations, so the material can be challenging. The assessments included one midterm and one survey-style final paper, neither of which was difficult.\\
+\MathStatCode{\CourseCode{DDA6020_v_001_250813.pdf}{DDA6020}} & Measure Theoretic Probability & 9 & The most difficult course the editor has taken at CUHK(SZ); please consider carefully. This is a PhD A-category course\footnote{For PhD A-category courses, PhD students who earn an A-range grade may waive the qualifying exam. Therefore, PhD students also tend to take the course seriously, and curve-based grading may create substantial competitive pressure.}\setcounter{PhDACategoryFootnote}{\value{footnote}}. MAT3006 is strongly recommended before this course, and taking them in the same semester is strongly discouraged because some constructions and definitions differ slightly and may easily cause conceptual confusion.\\
+\FinEconCode{\CourseCode{FIN6131_v_001_250722.pdf}{FIN6131}} & Portfolio and Asset Management & 4 & Taken together with Financial Engineering and Financial Mathematics graduate students; grading pressure was relatively low.\\
+\MathStatCode{\CourseCode{MAT3006_v_004_250808.pdf}{MAT3006}} & Real Analysis & 8 & Taught by Prof. Weiming NI. The course itself is difficult and should be chosen carefully, although the exams were not especially hard. \\
+\MathStatCode{\CourseCode{MAT4220_v_003_240812.pdf}{MAT4220}} & Partial Differential Equations & 7 & Starting from 2025 Fall, the course was restructured and used David Borthwick's \textit{Introduction to Partial Differential Equations}. The content shifted from one-dimensional to higher-dimensional PDEs and relied heavily on MAT2060 and MAT3006. It requires stronger calculus fundamentals than MAT1012; even with a good grade in MAT1012 and USTF\footnote{USTF is short for Undergraduate Student Teaching Fellow.} experience for MAT1012, the editor still found the course quite challenging.\\
+\MathStatCode{\CourseCode{STA4001_v_007_250721.pdf}{STA4001}} & Stochastic Processes & 4 & \\ \midhline
+
+\multicolumn{4}{l}{\normalsize\textbf{2026 Spring}}\\ \lighthline
+\FinEconCode{\CourseCode{DDA4080_v_002_251111.pdf}{DDA4080}} & Capstone Project: Portfolio Optimization & 6 & The editor's project was conducted with MY Capital and focused on portfolio-related topics; it was not easy and required roughly one to two days per week.\\
+\FinEconCode{\CourseCode{DDA4100_v_006_251104.pdf}{DDA4100}} & Industrial Practices / Internship & 1 & May be registered within one year after an internship; for some majors, such as Financial Engineering, it may substitute for FTE4999 as one Major Elective. Credits can be earned by submitting two descriptive essays, so the WL is very light.\\
+\MathStatCode{\CourseCode{DDA6001_v_001_251113.pdf}{DDA6001}} & Advanced Stochastic Process & 6 & This is a PhD A-category course\footnotemark[\value{PhDACategoryFootnote}]. The course occasionally uses MAT3006 material and assumes students already know it; taking MAT3006 first is strongly recommended.\\
+\FinEconCode{\CourseCode{FIN6116_v_003_251212.pdf}{FIN6116}} & Analysis of Fixed-Income Securities & 3 & Taken together with part-time Master of Science in Business Analytics students. The course is relatively easy, and grading pressure was low.\\
+\FinEconCode{\CourseCode{FMA4800_v_004_251202.pdf}{FMA4800}} & Financial Computation & 4 & Mainly covers SDEs, Monte Carlo simulation, and tree methods. It is quite useful for students interested in derivatives pricing and related topics.\\
+\FinEconCode{\CourseCode{MFM5220_v_001_251218.pdf}{MFM5220}} & Algorithm Investment & 6 & Taken together with financial mathematics graduate students; grading pressure was relatively low.\\
+\MathStatCode{\CourseCode{STA2002H_v_002_251111.pdf}{STA2002H}} & Honours Probability and Statistics II & 5 & \\ \midhline
+\end{EditorCourseTable}
+
+\end{document}

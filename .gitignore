@@ -1,0 +1,28 @@
+.DS_Store
+.vscode/
+
+# Local reference materials not intended for the public repository.
+ref/
+
+# LaTeX build artifacts.
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Keep only the standalone personal course review files from tex/.
+tex/*
+!tex/editor_course_schedule.tex
+!tex/editor_course_schedule.pdf
+
