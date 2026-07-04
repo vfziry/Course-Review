@@ -7,7 +7,6 @@ The comments are highly subjective and are provided for reference only. Course c
 ## Files
 
 - `tex/editor_course_schedule.pdf`: the main course review PDF.
-- `tex/editor_course_schedule.tex`: LaTeX source for the PDF.
 - `syllabus/`: collected course syllabi. Course codes in the PDF link to the corresponding syllabus when available.
 
 ## Notes
@@ -17,4 +16,3 @@ The comments are highly subjective and are provided for reference only. Course c
   - Green: Finance & Economics
   - Blue: Mathematics & Statistics
   - Red: Computer Science & Data Science
-
